@@ -865,27 +865,21 @@ main {
   .sidebar__item a::before {
     content: ' | '; }
 
-.alignright {
-  float: right; }
-
-.alignleft {
-  float: left; }
-
-.aligncenter {
-  display: block;
-  margin-right: auto;
-  margin-left: auto; }
-
 .alignright, a .alignright {
-  float: right; }
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em; }
 
 .alignleft, a .alignleft {
-  float: left; }
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em; }
 
 .aligncenter, a .aligncenter {
   display: block;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  margin-bottom: 1em; }
 
 /*------------------------------------*    $NAVEGACIÓN
 \*------------------------------------*/
