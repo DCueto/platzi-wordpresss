@@ -1,10 +1,17 @@
 <footer class="footer-negro">
-	<ul>
-		<li>Sección 1</li>
-		<li>Sección 2</li>
-		<li>Sección 3</li>
-	</ul>
+	<strong>&copy; By Platzi</strong><small>2017</small>
+	<?php 
+	wp_nav_menu(
+		array(
+			'theme_location' => 'menu-footer',
+			'container' => 'nav',
+			'container_class' => 'nav--footer',
+			'menu_class' => 'nav--footer__list'
+			)
+		);
+ ?>
 </footer>
+<?php wp_footer(); ?>
  	
 </body>
 </html>

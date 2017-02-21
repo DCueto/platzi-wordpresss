@@ -123,3 +123,30 @@ aside{
 	border-bottom:1px solid $basecolor;
 	margin-bottom: $baselineheight;
 }
+
+main{
+	display:table;
+	section{
+		display:table-cell;
+		width: 68%;
+	}
+	aside{
+		display: table-cell;
+		width: 32%;	
+	}
+}
+
+.sidebar{
+	display: table;
+
+}
+
+.sidebar__item{
+	display: table-cell;
+	padding: $gutterwidth;
+	a{
+		&::before{
+			content: ' | '
+		}
+	}
+}
