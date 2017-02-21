@@ -150,3 +150,34 @@ main{
 		}
 	}
 }
+
+
+//Esto es para que cuando edites la posición de una imagen en una entrada se alinee correctamente
+
+.alignright {
+        float: right;
+}
+
+.alignleft {
+        float: left;
+}
+
+.aligncenter {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+.alignright, a .alignright {
+        float: right;
+}
+
+.alignleft, a .alignleft {
+        float: left;
+}
+
+.aligncenter, a .aligncenter {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+}

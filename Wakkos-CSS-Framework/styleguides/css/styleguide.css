@@ -865,6 +865,28 @@ main {
   .sidebar__item a::before {
     content: ' | '; }
 
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+.aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+.alignright, a .alignright {
+  float: right; }
+
+.alignleft, a .alignleft {
+  float: left; }
+
+.aligncenter, a .aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
 /*------------------------------------*    $NAVEGACIÓN
 \*------------------------------------*/
 /**
