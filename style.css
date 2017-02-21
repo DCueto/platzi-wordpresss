@@ -263,7 +263,8 @@ img {
   max-width: 100%;
   border-width: 0;
   vertical-align: middle;
-  -ms-interpolation-mode: bicubic; }
+  -ms-interpolation-mode: bicubic;
+  height: auto; }
 
 /**
 * Selectores de elemento: un super "normalize":
@@ -271,7 +272,10 @@ img {
 /*------------------------------------*    $ELEMENTOS-FIGURE
 \*------------------------------------*/
 figure {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  text-align: center;
+  border: 3px solid #4d4d4d;
+  padding: 1em; }
   figure img {
     margin-bottom: 0.25em; }
   figure figcaption {
@@ -445,7 +449,7 @@ textarea[readonly] {
 
 input:focus,
 textarea:focus {
-  border-color: #bb2299, 40%;
+  border-color: #e2a222, 40%;
   box-shadow: 0 0 1px 1px #bfbfbf;
   outline: none; }
 
@@ -473,15 +477,15 @@ input:required:focus:valid {
 \*------------------------------------*/
 a {
   text-decoration: none;
-  color: #bb2299; }
+  color: #e2a222; }
   a:visited {
-    color: #bb2299; }
+    color: #e2a222; }
   a:hover {
     text-decoration: underline;
-    color: #bb2299; }
+    color: #e2a222; }
   a:focus {
     outline: thin dotted;
-    color: #bb2299; }
+    color: #e2a222; }
   a:hover, a:active {
     outline: 0; }
 
@@ -769,7 +773,7 @@ table {
   width: device-width; }
 
 html {
-  background: #e6e6e6;
+  background: white;
   font-size: 87.5%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
@@ -790,19 +794,57 @@ body {
 * y detalles que forman tu web. Disfruta!
 */
 .header {
+  padding: 12px;
   background-color: #4d4d4d; }
   .header h1, .header h2 {
     color: white; }
 
-.content {
+.container {
   padding: 12px; }
-  @media (min-width: 48em) {
-    .content article {
-      display: inline-block;
-      width: 30%; } }
+  @media (min-width: 56.25em) {
+    .container {
+      padding: 24px; } }
+
+@media (min-width: 48em) {
+  .container__item {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    background-color: #e6e6e6;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    padding: 12px; } }
+
+.page .container__item {
+  width: 90%;
+  display: block;
+  margin: 0 auto; }
+
+.page.sidebar {
+  width: 68%;
+  display: table-cell; }
+
+.table {
+  display: table; }
+
+aside {
+  display: table-cell;
+  width: 72%; }
+
+.footer-negro {
+  background-color: #4d4d4d; }
+  .footer-negro li {
+    display: inline-block;
+    color: white; }
+
+.blog {
+  background-color: #e2a222; }
+
+.article-title {
+  font-weight: 700; }
 
 .datos {
-  border-bottom: 1px solid #bb2299;
+  border-bottom: 1px solid #e2a222;
   margin-bottom: 1em; }
 
 /*------------------------------------*    $NAVEGACIÓN
@@ -834,7 +876,7 @@ body {
   z-index: 10;
   width: 42px;
   height: 42px;
-  color: #bb2299;
+  color: #e2a222;
   overflow: hidden;
   cursor: pointer;
   /**
@@ -927,7 +969,7 @@ body {
   z-index: 100;
   width: 100%;
   height: 42px;
-  color: #bb2299;
+  color: #e2a222;
   overflow: hidden;
   cursor: pointer;
   margin: 0;
@@ -1050,11 +1092,11 @@ input[type="submit"].btn:hover {
 * Botón principal
 */
 .btn--primary {
-  color: #bb2299; }
+  color: #e2a222; }
   .btn--primary:hover {
-    color: #bb2299; }
+    color: #e2a222; }
   .btn--primary:visited {
-    color: #bb2299; }
+    color: #e2a222; }
 
 /*------------------------------------*    $BOTONES-TAMAÑOS
 \*------------------------------------*/
@@ -1227,12 +1269,12 @@ input[type="submit"].btn:hover {
 
 ::-moz-selection {
   background-color: white;
-  color: #bb2299;
+  color: #e2a222;
   text-shadow: none; }
 
 ::selection {
   background-color: white;
-  color: #bb2299;
+  color: #e2a222;
   text-shadow: none; }
 
 /*------------------------------------*    $ABSTRACIONES

@@ -7,14 +7,12 @@
 	</header>
 
 
-	<section class="container" role="main">
+	<section class="container page" role="main">
 		<header class="container__header">
-			<h2>Últimas entradas</h2>
+			<h2>Categoria: </h2>
 		</header>
 
-		<?php rewind_posts(); ?>
-		<?php query_posts( 'order=Asc&cat=2'); ?>
-		
+		<?php rewind_posts(); ?>		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="container__item">
 				<header>

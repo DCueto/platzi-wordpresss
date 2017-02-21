@@ -1,20 +1,10 @@
-<?php get_header(); ?>
+<!-- TEMPLATE CATEGORY BLOG -->
 
-<body>
-	<header class="header">
-		<h1><?php bloginfo('name'); ?></h1>
-		<h2><?php bloginfo('description'); ?></h2>
-	</header>
+<?php get_header('blog'); ?>
 
+	<section class="container page" role="main">
 
-	<section class="container" role="main">
-		<header class="container__header">
-			<h2>Últimas entradas</h2>
-		</header>
-
-		<?php rewind_posts(); ?>
-		<?php query_posts( 'order=Asc&cat=2'); ?>
-		
+		<?php rewind_posts(); ?>		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="container__item">
 				<header>

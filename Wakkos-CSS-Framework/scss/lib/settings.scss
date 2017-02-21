@@ -196,7 +196,7 @@ $size-vars: (
 /**
  * Brand stuff
  */
-$basecolor      : rgb(187, 34, 153);
+$basecolor      : rgb(226, 162, 34);
 $basecolor-light: lighten($basecolor, 25%);
 $secondary      : rgb(219,216,121); // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 20); // Verde Bordes
@@ -215,7 +215,7 @@ $lightergrey 	: lighten($black, 90%);
 $white 			: rgb(255,255,255);
 
 // Web
-$background: 		$lightergrey;
+$background: 		$white;
 $textcolor: 		#494949;
 $textcolor-strong:	$black;
 
