@@ -61,4 +61,51 @@ function miplugin_register_sidebar2(){
 add_action('widgets_init', 'miplugin_register_sidebar2');
 
 
+// Integración de Metaboxes con el plugin de metabox.io
+
+add_filter( 'rwmb_meta_boxes', 'platzi_register_meta_boxes' );
+function platzi_register_meta_boxes( $meta_boxes ) {
+    $prefix = 'rw_';
+    // 1st meta box
+    $meta_boxes[] = array(
+        'id'         => 'personal',
+        'title'      => __( 'Personal Information', 'textdomain' ),
+        'post_types' => array( 'post', 'page' ),
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'fields' => array(
+            array(
+                'name'  => __( 'Full name', 'textdomain' ),
+                'desc'  => 'Format: First Last',
+                'id'    => $prefix . 'fname',
+                'type'  => 'text',
+                'std'   => 'Anh Tran',
+                'class' => 'custom-class',
+                'clone' => false,
+            ),
+            array(
+            	'name'  => __( 'Description', 'textdomain' ),
+            	'desc'  => 'Introduce la descripción',
+            	'id'    => $prefix . 'fdescription',
+            	'type'  => 'textarea',
+            	'std'   => 'Descripción',
+            	'class' => 'custom-class',
+            ),
+        )
+    );
+    // 2nd meta box
+    $meta_boxes[] = array(
+        'title'      => __( 'Media', 'textdomain' ),
+        'post_types' => 'movie',
+        'fields'     => array(
+            array(
+                'name' => __( 'URL', 'textdomain' ),
+                'id'   => $prefix . 'url',
+                'type' => 'text',
+            ),
+        )
+    );
+    return $meta_boxes;
+}
+
 ?>
